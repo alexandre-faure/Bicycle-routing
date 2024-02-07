@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <title>Application de routage</title>
+    </head>
+  <body>
+    <header>
+      <h1>Projet routage</h1>
+      <h2>Preuve de concept</h2>
+    </header>
+
+    <div id="loader" class="loader">
+      <div></div>
+      <div id="countdown">Veuillez patienter quelques instants...</div>
+    </div>
+
+    
+
+    <div id="gui_container">
+      <div id="info_route">
+        <div id="close_info_route"><</div>
+        <div class="header">Statistiques du trajet préconnisé</div>
+        <div class="content">
+          <p>
+            <label>Départ : </label>
+            <span id="start_street_text"></span>
+          </p>
+          <p>
+            <label>Arrivée : </label>
+            <span id="end_street_text"></span>
+          </p>
+          <p>
+            <label>Distance : </label>
+            <span id="distance_text"></span>
+          </p>
+          <p>
+            <label>Temps de trajet : </label>
+            <span id="estimated_time_text"></span>
+          </p>
+        </div>
+      </div>
+
+      <div id="map_container">
+        <div id="navigation_bar">
+          <div id="start-end_pannel">
+            <span id="road_start" class="button">Départ</span>
+            <span id="road_end" class="button">Arrivée</span>
+            <span id="calculate_road" class="button disabled">Calculer le trajet</span>
+          </div>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Projet réalisé dans le cadre du Pôle Projet Data Sciences de CentraleSupélec en 2023-2024.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

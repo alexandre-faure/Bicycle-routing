@@ -1,0 +1,15 @@
+# for data
+pandas==1.1.5
+numpy==1.21.0
+
+# for plotting
+matplotlib==3.3.2
+folium==0.14.0
+plotly==5.1.0
+
+# for simple routing
+osmnx==1.2.2
+networkx==3.0
+
+# for flask
+flask==3.0.0
